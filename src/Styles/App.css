@@ -1,0 +1,9 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.body-wrapper {
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #dbd5f3e7 0%, #d6ebf8 74%);
+    min-height: 100vh;
+}
