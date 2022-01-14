@@ -1,0 +1,8 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.body-wrapper {
+    background-image: url("../Assets/blueBG.jpg");
+    min-height: 100vh;
+}

@@ -1,0 +1,10 @@
+.page-card-wrapper{
+    min-height: 500px;
+    
+}
+.page-card-body{
+    background-color: rgba(255, 255 , 255, 80%) !important;
+}
+.page-card-body h1 {
+    color: #04619f;
+}
