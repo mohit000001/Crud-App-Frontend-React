@@ -9,7 +9,6 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { GetRecords } from "../Utils/Servies";
 import { Typography, Grid } from "@mui/material";
-import { minWidth } from "@mui/system";
 function List(props: any) {
     const [listData, setListData] = React.useState([]);
     React.useEffect(() => {
