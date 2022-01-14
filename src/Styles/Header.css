@@ -2,5 +2,13 @@
     min-height: 200px;
     background-color: #000000;
     background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+    padding: 10PX;
     /* background-image: url('../Assets/dd.png'); */
+}
+.navigation-link-wrapper{
+    padding: 5px;
+    border-radius: 2px;
+}
+.navigation-link-wrapper:hover{
+  background-color: #01406b;
 }
