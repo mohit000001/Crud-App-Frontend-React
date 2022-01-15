@@ -50,9 +50,9 @@ function List(props: any) {
                                     </TableHead>
                                     <TableBody>
 
-                                        {listData.length !== 0 ? listData.map((row: any) => (
+                                        {listData.length !== 0 ? listData.map((row: any, index) => (
                                             <TableRow
-                                                key={row.id}
+                                                key={index}
                                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                             >
                                                 <TableCell >
@@ -63,7 +63,7 @@ function List(props: any) {
                                                 <TableCell align="left">{row.class}</TableCell>
                                                 <TableCell align="left">{row.section}</TableCell>
                                             </TableRow>
-                                        )) : <div><Typography style={{ padding: 20}}> No Record Found</Typography> </div>}
+                                        )) : <Typography style={{ padding: 20}}> No Record Found</Typography> }
 
                                     </TableBody>
                                 </Table>
