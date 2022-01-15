@@ -18,7 +18,7 @@ function List(props: any) {
     React.useEffect(() => {
 
         GetRecords().then((data: any) => {
-            setListData([]);
+            setListData(data);
             setLoading(false);
         }).catch((error: any) => {
             setLoading(false);
