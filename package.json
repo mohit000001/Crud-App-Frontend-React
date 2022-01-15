@@ -30,7 +30,8 @@
     "start": "env-cmd -f .env.local react-scripts start",
     "build": "env-cmd -f .env.prod react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy-prod": "npm run build && cd build && aws s3 cp ./ s3://crud-app-reactjs-frontend --recursive"
   },
   "eslintConfig": {
     "extends": [
