@@ -9,11 +9,13 @@ import { Student } from "../Utils/TypesInterfaces";
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 
-
 function Add() {
   const { register, formState: { errors }, handleSubmit } = useForm();
+  const [saveBtnText, setSaveBtnText] = React.useState("Save");
+
   const onSubmit = async (data: any) => {
     setLoadingState(true);
+    setSaveBtnText('Saving...');
     const requestData: Student = {
       id: data.id,
       name: data.name,
@@ -22,6 +24,7 @@ function Add() {
       section: data.section
     }
     await AddRecord(requestData).then((message)=> {
+      setSaveBtnText('Save')
       setLoadingState(false);
       setSnackMsg(message)
       setSnackState(true);
@@ -48,6 +51,7 @@ function Add() {
           <Snackbar
             open={snackState}
             autoHideDuration={6000}
+            anchorOrigin={{ vertical: 'top', horizontal: 'center'}}
             message={snackMsg}
             onClose={() => { setSnackState(false) }}
             action={
@@ -141,7 +145,7 @@ function Add() {
               variant="contained"
               type="submit"
             >
-              Save
+              {saveBtnText}
             </LoadingButton>
           </form></Grid>
         </Grid>

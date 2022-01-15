@@ -11,7 +11,9 @@ import CloseIcon from '@mui/icons-material/Close';
 
 function Edit() {
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const [saveBtnText, setSaveBtnText] = React.useState("Edit");
     const onSubmit = async (data: any) => {
+        setSaveBtnText('Editing...');
         setLoadingState(true);
         const requestData: updateRequest = {
             query: {
@@ -25,6 +27,7 @@ function Edit() {
             }
         }
         await EditRecord(requestData).then((message) => {
+            setSaveBtnText('Edit');
             setLoadingState(false);
             setSnackMsg(message)
             setSnackState(true);
@@ -50,6 +53,7 @@ function Edit() {
                 <Grid container justifyContent="center" alignItems='center'>
                     <Snackbar
                         open={snackState}
+                        anchorOrigin={{ vertical: 'top', horizontal: 'center'}}
                         autoHideDuration={6000}
                         message={snackMsg}
                         onClose={() => { setSnackState(false) }}
@@ -144,7 +148,7 @@ function Edit() {
                             variant="contained"
                             type="submit"
                         >
-                            Edit
+                        {saveBtnText}
                         </LoadingButton>
                     </form></Grid>
                 </Grid>

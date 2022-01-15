@@ -10,11 +10,14 @@ import CloseIcon from '@mui/icons-material/Close';
 
 function Delete() {
     const { register, formState: { errors }, handleSubmit } = useForm();
-    
+    const [saveBtnText, setSaveBtnText] = React.useState("Delete");
+
     const onSubmit = async (data: any) => {
+        setSaveBtnText('Deleting...');
         const reqData = { id: data.id};
         setLoadingState(true);
         await DeleteRecord(reqData).then((message) => {
+            setSaveBtnText('Delete');
             setLoadingState(false);
             setSnackMsg(message)
             setSnackState(true);
@@ -30,6 +33,7 @@ function Delete() {
                 <Grid container justifyContent="center" alignItems='center'>
                     <Snackbar
                         open={snackState}
+                        anchorOrigin={{ vertical: 'top', horizontal: 'center'}}
                         autoHideDuration={6000}
                         message={snackMsg}
                         onClose={() => { setSnackState(false) }}
@@ -61,7 +65,7 @@ function Delete() {
                             variant="contained"
                             type="submit"
                         >
-                            Delete
+                            {saveBtnText}
                         </LoadingButton>
                     </form></Grid>
                 </Grid>
