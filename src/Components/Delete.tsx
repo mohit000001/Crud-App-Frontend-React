@@ -2,7 +2,7 @@ import React from "react";
 import PageCardWrapper from "./PageCardWrapper";
 import { TextField, Grid, Snackbar } from "@mui/material";
 import LoadingButton from '@mui/lab/LoadingButton';
-import SaveIcon from '@mui/icons-material/Save';
+import DeleteForeverSharpIcon from '@mui/icons-material/DeleteForeverSharp';
 import { useForm } from "react-hook-form";
 import { DeleteRecord } from '../Utils/Servies'
 import IconButton from '@mui/material/IconButton';
@@ -61,7 +61,7 @@ function Delete() {
                         <LoadingButton
                             loading={loadingState}
                             loadingPosition="start"
-                            startIcon={<SaveIcon />}
+                            startIcon={<DeleteForeverSharpIcon />}
                             variant="contained"
                             type="submit"
                         >

@@ -2,7 +2,7 @@ import React from "react";
 import PageCardWrapper from "./PageCardWrapper";
 import { TextField, Select, MenuItem, InputLabel, FormControl, Grid, Snackbar } from "@mui/material";
 import LoadingButton from '@mui/lab/LoadingButton';
-import SaveIcon from '@mui/icons-material/Save';
+import EditSharpIcon from '@mui/icons-material/EditSharp';
 import { useForm } from "react-hook-form";
 import { EditRecord } from '../Utils/Servies'
 import { updateRequest } from "../Utils/TypesInterfaces";
@@ -144,7 +144,7 @@ function Edit() {
                         <LoadingButton
                             loading={loadingState}
                             loadingPosition="start"
-                            startIcon={<SaveIcon />}
+                            startIcon={<EditSharpIcon />}
                             variant="contained"
                             type="submit"
                         >
