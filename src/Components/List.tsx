@@ -12,7 +12,7 @@ import { Typography, Grid } from "@mui/material";
 import LoadingOverlay from 'react-loading-overlay';
 import "../Styles/Comman.css";
 
-function List(props: any) {
+function List() {
     const [listData, setListData] = React.useState([]);
     const [loading, setLoading] = React.useState(true);
     React.useEffect(() => {
@@ -28,7 +28,6 @@ function List(props: any) {
     return (<>
         <PageCardWrapper Element={
             <>
-
                 <Grid container justifyContent="center" alignItems='center'>
                     <Grid sx={{ minWidth: "100%" }}><h1 style={{ marginBottom: 20 }}>Student List</h1>
                         <LoadingOverlay
