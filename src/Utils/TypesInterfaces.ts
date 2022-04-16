@@ -16,4 +16,9 @@ interface updateRequest {
         section: string
     }
 }
-export type { Student, updateRequest }
+
+interface User {
+    userName: string,
+    password: string
+}
+export type { Student, updateRequest, User }
