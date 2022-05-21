@@ -14,7 +14,7 @@ function Home() {
             <b> Use Guide : </b>Use the menus in top-right corner to navigate on
             different routes and make api calls. <br />
             <br />
-            <b>Technical Details : </b> <br />
+            <b>Technical Details -- : </b> <br />
             <ul style={{ listStyle: "none" }}>
               <li style={{ margin: 10 }}>
                 {" "}
